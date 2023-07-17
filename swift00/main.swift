@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// Lesson 1
+// Homework 1
 // Task 1: Вывести в консоль все четные числа от 0 до 100, включая 0
 for i in stride(from: 0, through: 100, by: 2) {
     print(i)
@@ -42,3 +42,17 @@ for i in stride(from: 11, through: 49, by: 2) {
     }
 }
 print("k = \(k)")
+
+// Homework 2
+// Task 1: Написать функцию, которая на вход принимает число: сумма, которую пользователь хочет положить на вклад, следующий аргумент это годовой процент, третий аргумент это срок. Функция возвращает сколько денег получит пользователь по итогу.
+func getMoney(money: Double, rate: Double, years: Int) -> Double {
+    return money * pow(1 + rate/100, Double(years));
+}
+print(getMoney(money: 1000000, rate: 10, years: 5))
+// Task 2: Создать перечисление, которое содержит 3 вида пиццы и создать переменные с каждым видом пиццы. Добавить возможность получения названия пиццы через rawValue.
+enum PizzaType: String{
+    case margherita = "Маргарита"
+    case pepperoni = "Пепперони"
+    case veggie = "Овощная"
+}
+print(PizzaType.veggie.rawValue)
